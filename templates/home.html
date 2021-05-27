@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+<center>
+    <form action="{% url 'result' %}" method="post">
+        {% csrf_token %}
+        <h3>Enter url:</h3>
+        <select name="url" required>
+            <option disabled selected>Select</option>
+        <option value='https://insider.in/all-digital-events-in-online'>Insider</option>
+        <option value="https://www.naadyogacouncil.com/en/events/">Naadyog</option>
+
+        </select>
+        <button type="submit" name="submit" >Submit</button>
+    </form>
+</center>
+
+</body>
+</html>
